@@ -1,0 +1,143 @@
+:root {
+  --main-bg-color: #01d4cf;
+  --primary-font-size: 14px;
+  --z-depth-1: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+@font-face {
+  font-family: "GoldPlay Light";
+  src: url("./assets/Goldplay Alt Regular.otf");
+  src: url("./assets/Goldplay Alt Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "GoldPlay Medium";
+  src: url("./assets/Goldplay Alt Medium.otf");
+  src: url("./assets/Goldplay Alt Medium.otf") format("opentype");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "GoldPlay Medium";
+  font-size: var(--primary-font-size);
+}
+
+*,
+input {
+  font-family: "GoldPlay Medium";
+  box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 10px 12px 12px 32px;
+  letter-spacing: 1px;
+  border: none;
+  border: 1px solid #bbc6c3;
+  font-family: "GoldPlay Light";
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--main-bg-color);
+  height: 100%;
+  padding: 10px 32px;
+}
+
+.app-container {
+  max-width: 1240px;
+  padding: 64px;
+  margin: 0 auto;
+}
+
+.form-container {
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box {
+  width: 50%;
+  margin-right: 32px;
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 32px;
+  margin-bottom: 24px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  padding: 16px 32px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  border: 2px solid var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.card:hover {
+  box-shadow: var(--z-depth-1);
+}
+
+.card .card-title {
+  font-size: 18px;
+  color: var(--main-bg-color);
+}
+
+.card .card-body > * {
+  font-family: "GoldPlay Light" !important;
+  line-height: 18px;
+}
+
+.card .card-footer {
+  margin-top: auto;
+  font-family: "GoldPlay Medium";
+  font-weight: bold;
+}
+/* 
+.search-input{
+  color: #bbc6c3;
+}
+.search-input:before {
+  content: url("./assets/search-24px.svg");
+  position: absolute;
+  top: 9px;
+  right: 8px;
+  height: 28px;
+  width: 28px;
+} */
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 32px;
+  }
+
+  .list-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 425px) {
+  .app-container {
+    padding: 16px;
+  }
+
+  input {
+    padding-left: 10px;
+  }
+
+  .list-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

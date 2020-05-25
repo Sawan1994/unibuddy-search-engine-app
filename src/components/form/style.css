@@ -1,0 +1,33 @@
+.AutocompleteText {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+
+.AutocompleteText ul {
+  position: absolute;
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-size: 14px;
+  background-color: white;
+  width: 100%;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  box-shadow: 2px 2px 6px rgba(1, 1, 1, 0.1), -2px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.AutocompleteText li {
+  padding: 8px 8px;
+  cursor: pointer;
+  font-family: "GoldPlay Light";
+}
+
+button {
+  border-radius: 4px;
+  border: none;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1), -2px -2px 6px rgba(0, 0, 0, 0.1);
+}
